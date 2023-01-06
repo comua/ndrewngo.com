@@ -1,0 +1,80 @@
+@tailwind components;
+
+@layer components {
+  /* Keyframes */
+  @keyframes background-slide {
+    100% {
+      background-position: bottom right;
+    }
+  }
+
+  /* Custom components */
+  .bg-gradient {
+    background: repeating-linear-gradient(
+      -20deg,
+      theme('colors.black'),
+      theme('colors.black'),
+      theme('colors.blue.900'),
+      theme('colors.black'),
+      theme('colors.black'),
+      theme('colors.black'),
+      theme('colors.blue.900'),
+      theme('colors.black'),
+      theme('colors.black') 25%
+    );
+    background-position: top left;
+    background-size: 6400% 6400%;
+    animation: background-slide 120s linear infinite;
+  }
+
+  .bg-gradient-about {
+    background: repeating-linear-gradient(
+      -20deg,
+      theme('colors.white'),
+      theme('colors.pink.100'),
+      theme('colors.pink.200'),
+      theme('colors.pink.100'),
+      theme('colors.white'),
+      theme('colors.pink.100'),
+      theme('colors.pink.200'),
+      theme('colors.pink.100'),
+      theme('colors.white') 25%
+    );
+    background-position: top left;
+    background-size: 6400% 6400%;
+    animation: background-slide 120s linear infinite;
+  }
+
+  .button-hover {
+    .button-background-white,
+    .button-background-black,
+    .button-text-black,
+    .button-text-white {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      .button-background-white {
+        background: theme(colors.white);
+      }
+      .button-background-black {
+        background: theme(colors.black);
+      }
+
+      .button-text-black {
+        color: theme(colors.black);
+      }
+      .button-text-white {
+        color: theme(colors.white);
+      }
+    }
+  }
+
+  .link-list a {
+    @apply underline;
+    @apply decoration-2;
+    @apply transition-all;
+    @apply duration-300;
+    @apply hover:no-underline;
+  }
+}
