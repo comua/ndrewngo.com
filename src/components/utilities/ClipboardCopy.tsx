@@ -1,19 +1,8 @@
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
-import React, { FC, PropsWithChildren, useEffect, useState } from 'react'
+import React, { FC, PropsWithChildren, useState } from 'react'
 import { useCopyToClipboard } from 'usehooks-ts'
 
 interface Props {
   label: string
-}
-
-const buttonVariants = {
-  hidden: {},
-  visible: {},
-}
-
-const buttonContentVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
 }
 
 export const ClipboardCopy: FC<PropsWithChildren<Props>> = ({ label, children }) => {
