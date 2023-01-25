@@ -70,6 +70,7 @@ const Company = ({ company, nextCompany }) => {
               style={{
                 objectFit: 'cover',
               }}
+              placeholder="blur"
             />
           </div>
           <div className="flex w-screen flex-col tablet:px-48">

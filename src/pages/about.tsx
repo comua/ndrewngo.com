@@ -66,6 +66,8 @@ const AboutPage: FC = () => {
                   style={{
                     objectFit: 'cover',
                   }}
+                  priority
+                  placeholder="blur"
                 />
               </motion.section>
               <motion.section

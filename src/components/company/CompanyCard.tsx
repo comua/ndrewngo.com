@@ -45,6 +45,8 @@ export const CompanyCard = ({ company, pageControl, isPageInView }) => {
             zIndex: 0,
             transition: 'all 0.3s',
           }}
+          priority
+          placeholder="blur"
         />
         <div className="absolute h-full w-full bg-black/20" />
       </motion.div>
