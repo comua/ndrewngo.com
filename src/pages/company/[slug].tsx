@@ -6,6 +6,7 @@ import { ParsedUrlQuery } from 'querystring'
 import React, { useEffect, useRef } from 'react'
 
 import { CompanyAttributes } from '../../components/company/CompanyAttributes'
+import { NextCompanyLink } from '../../components/company/NextCompanyLink'
 import { NoScrollLink } from '../../components/navigation/NoScrollLink'
 import { Projects } from '../../components/projects/Projects'
 import { Title } from '../../components/Title'
@@ -56,7 +57,7 @@ const Company = ({ company, nextCompany }) => {
             >
               {company.description}
             </motion.p>
-            <Title className="mb-48 tablet:mb-96 tablet:text-192">{company.name}</Title>
+            <Title className="pb-48 tablet:pb-96 tablet:text-192">{company.name}</Title>
             <CompanyAttributes
               {...{ attributes: company.attributes, pageControl: control, isInPageView: isInView }}
             />
@@ -76,18 +77,7 @@ const Company = ({ company, nextCompany }) => {
           <div className="flex w-screen flex-col tablet:px-48">
             <Projects {...{ projects: company.projects }} />
           </div>
-          <NoScrollLink
-            href={`/company/${nextCompany.route}`}
-            className="button-hover flex min-h-[30vh] flex-col items-center justify-center py-64 tablet:min-h-[50vh] tablet:px-48"
-          >
-            <p className="text-24">Next company</p>
-            <h1 className="mb-48 font-dahlia text-64 leading-none tablet:mb-96 tablet:text-192">
-              {nextCompany.name}
-            </h1>
-            <div className="button-background-black flex h-64 w-64 items-center justify-center rounded-full bg-black/10">
-              <span className="button-text-white flex items-center justify-center text-24">↓</span>
-            </div>
-          </NoScrollLink>
+          <NextCompanyLink {...{ nextCompany }} />
         </motion.div>
       </div>
     </AnimatePresence>

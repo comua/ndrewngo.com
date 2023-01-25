@@ -42,7 +42,7 @@ export const Project = ({ project, index = 0 }) => {
                 style={{
                   objectFit: 'contain',
                 }}
-                placeholder="blur"
+                priority
               />
             </div>
           )

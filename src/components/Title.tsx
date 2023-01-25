@@ -43,7 +43,7 @@ const letterVariant = {
 
 export const Title: FC<PropsWithChildren<Props>> = ({ children, className }) => {
   const classes = useMemo(() => {
-    return twMerge('flex font-dahlia text-64 leading-none tablet:text-144', className)
+    return twMerge('flex font-dahlia text-64 leading-tight tablet:text-144', className)
   }, [className])
 
   return (

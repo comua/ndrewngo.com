@@ -23,7 +23,7 @@ const buttonItemVariant = {
   },
 }
 
-export const CompanyLink = ({ company }) => {
+export const NextCompanyLink = ({ nextCompany }) => {
   const containerRef = useRef()
   const control = useAnimation()
   const isInView = useInView(containerRef, { amount: 0.5 })
@@ -31,16 +31,14 @@ export const CompanyLink = ({ company }) => {
   useEffect(() => {
     if (isInView) {
       control.start('visible')
-    } else {
-      control.start('hidden')
     }
   }, [control, isInView])
 
   return (
     <AnimatePresence>
       <NoScrollLink
-        href={`/company/${company.route}`}
-        className="button-hover z-10 flex cursor-pointer flex-col items-center justify-center"
+        href={`/company/${nextCompany.route}`}
+        className="button-hover flex min-h-[30vh] flex-col items-center justify-center py-32 tablet:min-h-[50vh] tablet:py-64 tablet:px-48"
       >
         <motion.div
           variants={buttonVariant}
@@ -49,17 +47,15 @@ export const CompanyLink = ({ company }) => {
           ref={containerRef}
           className="flex flex-col items-center justify-center"
         >
-          <motion.p variants={buttonItemVariant} className="text-14 font-bold">
-            {company.description}
+          <motion.p variants={buttonItemVariant} className="text-14 tablet:text-24">
+            Next company
           </motion.p>
-          <Title className="pb-16">{company.name}</Title>
+          <Title className="pb-24 tablet:pb-32 tablet:text-192">{nextCompany.name}</Title>
           <motion.div
             variants={buttonItemVariant}
-            className="button-background-white relative flex h-64 w-64 items-center justify-center rounded-full bg-black/60"
+            className="button-background-black flex h-64 w-64 items-center justify-center rounded-full bg-black/10"
           >
-            <span className="button-text-black absolute flex -rotate-90 items-center justify-center text-24">
-              ↓
-            </span>
+            <span className="button-text-white flex items-center justify-center text-24">↓</span>
           </motion.div>
         </motion.div>
       </NoScrollLink>

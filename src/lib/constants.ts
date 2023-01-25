@@ -15,8 +15,15 @@ import sidebarSchedule from '../../public/images/future/sidebar-schedule.png'
 import siteCoaches from '../../public/images/future/site-coaches.png'
 import wocHeartRateZones from '../../public/images/future/woc-heart-rate-zones.png'
 import futureHero from '../../public/images/future-hero.jpeg'
+import systemCampaigns from '../../public/images/google/system-campaigns.png'
 import googleHero from '../../public/images/google-hero.jpg'
+import dashboardClients from '../../public/images/meraki/dashboard-clients.png'
+import dashboardSearch from '../../public/images/meraki/dashboard-search.gif'
+import deviceLocation from '../../public/images/meraki/device-location.png'
+import deviceSummary from '../../public/images/meraki/device-summary.png'
 import merakiHero from '../../public/images/meraki-hero.jpeg'
+import reportsTraffic from '../../public/images/xirrus/reports-traffic.png'
+import xmsHeatmaps from '../../public/images/xirrus/xms-heatmaps.png'
 import xirrusHero from '../../public/images/xirrus-hero.jpeg'
 
 interface ICompanyAttributes {
@@ -127,8 +134,11 @@ export const COMPANY_MAP = {
     backgroundClass: 'bg-green-100',
     heroImage: merakiHero,
     projects: [
-      { name: 'Dashboard', highlight: { images: [], description: '' } },
-      { name: 'Business', highlight: { images: [], description: '' } },
+      {
+        name: 'Dashboard',
+        highlight: { images: [dashboardClients, dashboardSearch], description: '' },
+      },
+      { name: 'Device', highlight: { images: [deviceLocation, deviceSummary], description: '' } },
     ],
   },
   [Company.Google]: {
@@ -147,7 +157,7 @@ export const COMPANY_MAP = {
     colorClass: 'text-red-700',
     backgroundClass: 'bg-red-100',
     heroImage: googleHero,
-    projects: [{ name: 'Ads', highlight: { images: [], description: '' } }],
+    projects: [{ name: 'Ads', highlight: { images: [systemCampaigns], description: '' } }],
   },
   [Company.Xirrus]: {
     name: 'Xirrus',
@@ -159,15 +169,15 @@ export const COMPANY_MAP = {
         endedAt: 'Oct 2012',
       },
       role: 'Software Engineer',
-      team: 'Ads',
+      team: 'Product',
       url: 'https://www.cambiumnetworks.com/xirrus',
     },
     colorClass: 'text-orange-700',
     backgroundClass: 'bg-orange-100',
     heroImage: xirrusHero,
     projects: [
-      { name: 'Dashboard', highlight: { images: [], description: '' } },
-      { name: 'Reports', highlight: { images: [], description: '' } },
+      { name: 'XMS', highlight: { images: [xmsHeatmaps], description: '' } },
+      { name: 'Reports', highlight: { images: [reportsTraffic], description: '' } },
     ],
   },
 }

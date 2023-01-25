@@ -46,7 +46,7 @@ const AboutPage: FC = () => {
         >
           <div className="pt-64 tablet:w-1/2 tablet:pt-96">
             <section>
-              <Title className="mb-32 mobile:text-96">Engineer</Title>
+              <Title className="pb-32 mobile:text-96">Engineer</Title>
             </section>
             <motion.section variants={sectionVariants} className="text-16 tablet:text-24">
               <p>Frontend engineer based in Brooklyn, New York.</p>
