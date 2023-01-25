@@ -1,14 +1,25 @@
-import React, { FC, PropsWithChildren, useState } from 'react'
+import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import React, { FC, PropsWithChildren, useEffect, useState } from 'react'
 import { useCopyToClipboard } from 'usehooks-ts'
 
 interface Props {
   label: string
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const buttonVariants = {
+  hidden: {},
+  visible: {},
+}
+
+const buttonContentVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+}
+
 export const ClipboardCopy: FC<PropsWithChildren<Props>> = ({ label, children }) => {
   const [, copy] = useCopyToClipboard()
   const [isCopied, setIsCopied] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
 
   if (typeof children !== 'string') {
     throw new Error('ClipboardCopy only accepts a string as child.')
@@ -23,9 +34,37 @@ export const ClipboardCopy: FC<PropsWithChildren<Props>> = ({ label, children })
   }
 
   return (
-    <button type="button" className="flex flex-col" onClick={handleCopy}>
-      <span className="opacity-50">{isCopied ? 'Copied' : 'Copy to clipboard'}</span>
-      <span>{children}</span>
+    <button
+      type="button"
+      className="flex flex-col pt-4 pr-4"
+      onClick={handleCopy}
+      onMouseOver={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <span className={`flex h-[2rem] flex-col items-start overflow-hidden`}>
+        <span className={`${isHovered && 'translate-y-[-100%]'} transition-all duration-300`}>
+          {label}
+        </span>
+        <span
+          className={`${
+            isHovered && 'translate-y-[-100%] delay-200'
+          } text-12 opacity-50 transition-all duration-300`}
+        >
+          {isCopied ? 'Copied' : 'Copy to clipboard'}
+        </span>
+      </span>
+      <span className={`flex h-[2rem] flex-col items-start overflow-hidden`}>
+        <span
+          className={`${isHovered && 'translate-y-[-100%] delay-100'} transition-all duration-300`}
+        >
+          Contact ↗
+        </span>
+        <span
+          className={`${isHovered && 'translate-y-[-100%] delay-300'} transition-all duration-300`}
+        >
+          {children}
+        </span>
+      </span>
     </button>
   )
 }

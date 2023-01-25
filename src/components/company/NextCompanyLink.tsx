@@ -48,7 +48,7 @@ export const NextCompanyLink = ({ nextCompany }) => {
           className="flex flex-col items-center justify-center"
         >
           <motion.p variants={buttonItemVariant} className="text-14 tablet:text-24">
-            Next company
+            Next experience
           </motion.p>
           <Title className="pb-24 tablet:pb-32 tablet:text-192">{nextCompany.name}</Title>
           <motion.div

@@ -28,7 +28,7 @@ export const CompanyCard = ({ company, pageControl, isPageInView }) => {
   }, [pageControl, isPageInView])
 
   return (
-    <div className="relative mt-96 flex min-h-[50vh] min-w-full snap-center items-center justify-center first:mt-96 last:mb-96 tablet:min-h-[60vh] tablet:min-w-[50vw]">
+    <div className="relative mt-64 flex min-h-[50vh] min-w-full snap-center items-center justify-center first:mt-0 tablet:mt-96 tablet:min-h-[60vh] tablet:min-w-[50vw]">
       <motion.div
         variants={imageVariants}
         initial="hidden"

@@ -21,13 +21,13 @@ const Home: FC = () => {
         ref={containerRef}
       >
         <NextSeo title={title} description={description} openGraph={{ title, description }} />
-        <div className="bg-gradient-mask-top fixed inset-x-0 top-0 z-10" />
-        <div className="bg-gradient-mask-bottom fixed inset-x-0 top-[100vh] z-10 translate-y-[-100%]" />
+        {/* <div className="bg-gradient-mask-top fixed inset-x-0 top-0 z-10" />
+        <div className="bg-gradient-mask-bottom fixed inset-x-0 top-[100vh] z-10 translate-y-[-100%]" /> */}
         <section className="flex max-h-screen flex-col">
           <CompanyCards {...{ pageControl: control, isPageInView: isInView }} />
         </section>
         <div className="absolute left-0 bottom-0 m-24 text-14 tablet:m-48">
-          <ClipboardCopy {...{ label: 'Email' }}>andrewngorain@gmail.com</ClipboardCopy>
+          <ClipboardCopy {...{ label: 'Frontend Engineer' }}>andrewngorain@gmail.com</ClipboardCopy>
         </div>
       </div>
     </AnimatePresence>
