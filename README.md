@@ -14,7 +14,7 @@
     You can do anything at ndrewngo.com. Anything at all. The only limit is yourself. Welcome to ndrewngo.com.
 
     ```shell
-    # clone Comua Club into your workspace
+    # clone ndrewngo.com into your workspace
     git clone git@github.com:comua/ndrewngo.com.git
     ```
 
