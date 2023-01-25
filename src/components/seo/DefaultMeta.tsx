@@ -4,7 +4,6 @@ import { FC } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 
 import tailwindConfig from '../../../tailwind.config.js'
-import { DEFAULT_PAGE_TITLE } from '../../lib/constants'
 
 interface DefaultMetaProps {
   canonical: string
@@ -15,14 +14,14 @@ export const DefaultMeta: FC<DefaultMetaProps> = ({ canonical }) => {
   const site = {
     themeColor: (tailwindVars.theme.colors as any).light,
     locale: 'en',
-    name: DEFAULT_PAGE_TITLE,
-    description: 'Frontend engineer based in Brooklyn, New York',
+    name: 'Andrew Ngo',
+    description: 'Frontend engineer based in New York',
   }
 
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s - ${site.name}`}
+        titleTemplate={`${site.name} - %s`}
         defaultTitle={site.name}
         description={site.description}
         canonical={canonical}

@@ -109,10 +109,12 @@
   }
 
   .link-list a {
-    @apply underline;
-    @apply decoration-2;
-    @apply transition-all;
-    @apply duration-300;
-    @apply hover:no-underline;
+    border-bottom: 2px solid;
+    transition: all 200ms;
+    line-height: 1.25;
+
+    &:hover {
+      border-bottom: none;
+    }
   }
 }

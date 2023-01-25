@@ -5,7 +5,6 @@ import { FC, useEffect, useRef } from 'react'
 
 import profilePic from '../../public/images/profile.jpg'
 import { Title } from '../components/Title'
-import { DEFAULT_PAGE_TITLE } from '../lib/constants'
 
 const pageVariants = {
   hidden: { opacity: 0 },
@@ -22,7 +21,7 @@ const AboutPage: FC = () => {
   const control = useAnimation()
   const isInView = useInView(containerRef, { amount: 0.5 })
 
-  const title = DEFAULT_PAGE_TITLE
+  const title = 'About'
   const description = 'About page'
 
   useEffect(() => {
@@ -49,7 +48,7 @@ const AboutPage: FC = () => {
               <Title className="pb-32 mobile:text-96">Engineer</Title>
             </section>
             <motion.section variants={sectionVariants} className="text-16 tablet:text-24">
-              <p>Frontend engineer based in Brooklyn, New York.</p>
+              <p>Frontend engineer based in New York.</p>
             </motion.section>
           </div>
           <div className="flex flex-1 py-24 tablet:py-48">
@@ -81,20 +80,6 @@ const AboutPage: FC = () => {
                     impactful features, and pragmatic builds.
                   </p>
                 </div>
-                {/* <div className="pt-24 tablet:pt-48">
-                  <h4 className={`mb-16 flex flex-col text-14`}>Companies I&apos;ve worked with</h4>
-                  <div className="text-16 tablet:text-24">
-                    {Object.keys(COMPANY_MAP).map((key) => {
-                      const project = COMPANY_MAP[key]
-                      return (
-                        <span key={`about-company-${project.name}`} className="ml-24 first:ml-0">
-                          <a href={project.attributes.url}>{project.name}</a>
-                          <span>.</span>
-                        </span>
-                      )
-                    })}
-                  </div>
-                </div> */}
                 <div className="pt-24 tablet:pt-48">
                   <h4 className={`mb-16 flex flex-col text-14`}>Contact</h4>
                   <div className="link-list flex text-16 tablet:text-24">

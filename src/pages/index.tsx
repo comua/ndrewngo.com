@@ -4,14 +4,13 @@ import { FC, useRef } from 'react'
 
 import { CompanyCards } from '../components/company/CompanyCards'
 import { ClipboardCopy } from '../components/utilities/ClipboardCopy'
-import { DEFAULT_PAGE_TITLE } from '../lib/constants'
 
 const Home: FC = () => {
   const containerRef = useRef()
   const control = useAnimation()
   const isInView = useInView(containerRef, { amount: 0.5 })
 
-  const title = DEFAULT_PAGE_TITLE
+  const title = 'Frontend Engineer'
   const description = 'Home page'
 
   return (

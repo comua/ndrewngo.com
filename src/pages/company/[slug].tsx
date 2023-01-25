@@ -9,7 +9,7 @@ import { CompanyAttributes } from '../../components/company/CompanyAttributes'
 import { NextCompanyLink } from '../../components/company/NextCompanyLink'
 import { Projects } from '../../components/projects/Projects'
 import { Title } from '../../components/Title'
-import { COMPANY_MAP, DEFAULT_PAGE_TITLE } from '../../lib/constants'
+import { COMPANY_MAP } from '../../lib/constants'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -25,8 +25,8 @@ const Company = ({ company, nextCompany }) => {
   const control = useAnimation()
   const isInView = useInView(containerRef, { amount: 0.5 })
 
-  const title = `${DEFAULT_PAGE_TITLE} | ${company.name}`
-  const description = 'This is the home page'
+  const title = company.name
+  const description = `Experience at ${company.name}`
 
   useEffect(() => {
     if (isInView) {

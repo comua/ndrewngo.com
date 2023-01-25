@@ -183,5 +183,3 @@ export const COMPANY_MAP = {
 }
 
 export const EXPO_OUT = [0.19, 1, 0.22, 1]
-
-export const DEFAULT_PAGE_TITLE = 'Andrew Ngo - Frontend Engineer'

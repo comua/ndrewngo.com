@@ -19,7 +19,7 @@ export const ClipboardCopy: FC<PropsWithChildren<Props>> = ({ label, children })
     setIsCopied(true)
     setTimeout(() => {
       setIsCopied(false)
-    }, 1500)
+    }, 2000)
   }
 
   return (
