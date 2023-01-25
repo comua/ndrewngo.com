@@ -7,7 +7,6 @@ import React, { useEffect, useRef } from 'react'
 
 import { CompanyAttributes } from '../../components/company/CompanyAttributes'
 import { NextCompanyLink } from '../../components/company/NextCompanyLink'
-import { NoScrollLink } from '../../components/navigation/NoScrollLink'
 import { Projects } from '../../components/projects/Projects'
 import { Title } from '../../components/Title'
 import { COMPANY_MAP, DEFAULT_PAGE_TITLE } from '../../lib/constants'
