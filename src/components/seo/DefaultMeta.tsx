@@ -4,6 +4,7 @@ import { FC } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 
 import tailwindConfig from '../../../tailwind.config.js'
+import { DEFAULT_PAGE_TITLE } from '../../lib/constants'
 
 interface DefaultMetaProps {
   canonical: string
@@ -14,7 +15,7 @@ export const DefaultMeta: FC<DefaultMetaProps> = ({ canonical }) => {
   const site = {
     themeColor: (tailwindVars.theme.colors as any).light,
     locale: 'en',
-    name: 'Andrew Ngo - Frontend Engineer',
+    name: DEFAULT_PAGE_TITLE,
     description: 'Frontend engineer based in Brooklyn, New York',
   }
 

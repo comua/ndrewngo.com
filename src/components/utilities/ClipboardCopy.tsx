@@ -5,6 +5,7 @@ interface Props {
   label: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ClipboardCopy: FC<PropsWithChildren<Props>> = ({ label, children }) => {
   const [, copy] = useCopyToClipboard()
   const [isCopied, setIsCopied] = useState(false)

@@ -26,6 +26,7 @@ interface ICompanyAttributes {
   url: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface ICompanyProps {
   name: string
   route: Company

@@ -150,6 +150,7 @@ export const PageTransition: FC<PropsWithChildren> = ({ children }) => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
