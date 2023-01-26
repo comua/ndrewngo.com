@@ -81,6 +81,10 @@ const AboutPage: FC = () => {
                   </p>
                 </div>
                 <div className="pt-24 tablet:pt-48">
+                  <h4 className={`mb-16 flex flex-col text-14`}>Active</h4>
+                  <p className="text-16 tablet:text-24">2010 - Present</p>
+                </div>
+                <div className="pt-24 tablet:pt-48">
                   <h4 className={`mb-16 flex flex-col text-14`}>Contact</h4>
                   <div className="link-list flex text-16 tablet:text-24">
                     <a href="mailto:andrewngorain@gmail.com?Subject=Hello">Email</a>
