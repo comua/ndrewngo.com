@@ -8,11 +8,11 @@ import storeWilliamsburg from '../../public/images/everlane/store-williamsburg.p
 import everlaneHero from '../../public/images/everlane-hero.jpeg'
 import compassOnMount from '../../public/images/future/compass-on-mount.gif'
 import compassOverview from '../../public/images/future/compass-overview.png'
-import productApp from '../../public/images/future/product-app.jpeg'
-import sidebarEquipmentEntry from '../../public/images/future/sidebar-equipment-entry.gif'
-import sidebarLikes from '../../public/images/future/sidebar-likes.png'
+import sidebarEquipment from '../../public/images/future/sidebar-equipment.png'
+import sidebarHome from '../../public/images/future/sidebar-home.png'
 import sidebarSchedule from '../../public/images/future/sidebar-schedule.png'
 import siteCoaches from '../../public/images/future/site-coaches.png'
+import wocHeartRateInteractive from '../../public/images/future/woc-heart-rate-interactive.gif'
 import wocHeartRateZones from '../../public/images/future/woc-heart-rate-zones.png'
 import futureHero from '../../public/images/future-hero.jpeg'
 import systemCampaigns from '../../public/images/google/system-campaigns.png'
@@ -73,19 +73,18 @@ export const COMPANY_MAP = {
     projects: [
       { name: 'Website', highlight: { images: [siteCoaches], description: '' } },
 
-      { name: 'Workouts', highlight: { images: [wocHeartRateZones], description: '' } },
+      {
+        name: 'Workouts',
+        highlight: { images: [wocHeartRateZones, wocHeartRateInteractive], description: '' },
+      },
       {
         name: 'Compass',
         highlight: { images: [compassOverview, compassOnMount], description: '' },
       },
       {
-        name: 'Product',
-        highlight: { images: [productApp], description: '' },
-      },
-      {
         name: 'Sidebar',
         highlight: {
-          images: [sidebarSchedule, sidebarLikes, sidebarEquipmentEntry],
+          images: [sidebarHome, sidebarSchedule, sidebarEquipment],
           description: '',
         },
       },
@@ -112,7 +111,11 @@ export const COMPANY_MAP = {
       { name: 'Product', highlight: { images: [productDenim], description: '' } },
       {
         name: 'Collection',
-        highlight: { images: [collectionBestsellers, collectionProduct], description: '' },
+        highlight: { images: [collectionBestsellers], description: '' },
+      },
+      {
+        name: 'Items',
+        highlight: { images: [collectionProduct], description: '' },
       },
       { name: 'Store', highlight: { images: [storeWilliamsburg] } },
     ],

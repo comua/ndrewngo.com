@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export const Project = ({ project, index = 0 }) => {
+  const [paddingTop, setPaddingTop] = useState('0')
+
   const placement = index + 1
   const isDivisibleBy2 = placement % 2 === 0
   const isDivisibleBy3 = placement % 3 === 0
@@ -13,48 +15,37 @@ export const Project = ({ project, index = 0 }) => {
     isDivisibleBy3 && 'justify-end'
   )
 
-  const imageContainerClasses = twMerge(
-    'flex flex-col w-full tablet:flex-row tablet:w-4/5',
-    isDivisibleBy2 && 'tablet:w-full'
-  )
-
   return (
     <div className={containerClasses}>
-      {/* {isEvenPlace && (
-        <div className="mt-32 text-14">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam vero cupiditate
-          illum? Autem pariatur, molestias fugit nemo dolor delectus reiciendis animi iusto magni
-          excepturi vitae consequuntur itaque nostrum provident.
-        </div>
-      )} */}
-      <div className={imageContainerClasses}>
+      <div className="flex w-full flex-col tablet:w-3/4 tablet:flex-row">
         {project.highlight.images?.map((image) => {
           return (
-            <div
-              key={image}
-              className="relative mt-24 aspect-video w-full first:mt-0 first:ml-0 tablet:ml-24 tablet:mt-0 tablet:aspect-auto tablet:h-[60vh]"
-            >
-              <Image
-                src={image}
-                alt="project hero image"
-                fill
-                sizes={`100vw`}
-                style={{
-                  objectFit: 'contain',
-                }}
-                priority
-              />
+            <div key={image} className="mt-24 flex w-full flex-col tablet:mt-0 tablet:ml-24">
+              <div className="relative w-full first:mt-0 first:ml-0" style={{ paddingTop }}>
+                <Image
+                  src={image}
+                  alt="project hero image"
+                  fill
+                  sizes={`100vw`}
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  priority
+                  onLoad={({ target }) => {
+                    const { naturalWidth, naturalHeight } = target as HTMLImageElement
+                    setPaddingTop(`calc(100% / (${naturalWidth} / ${naturalHeight})`)
+                  }}
+                />
+              </div>
+              {/* <div className="mt-16 text-12">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam vero
+                cupiditate illum? Autem pariatur, molestias fugit nemo dolor delectus reiciendis
+                animi iusto magni excepturi vitae consequuntur itaque nostrum provident.
+              </div> */}
             </div>
           )
         })}
       </div>
-      {/* {!isEvenPlace && (
-        <div className="mt-32 text-14">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam vero cupiditate
-          illum? Autem pariatur, molestias fugit nemo dolor delectus reiciendis animi iusto magni
-          excepturi vitae consequuntur itaque nostrum provident.
-        </div>
-      )} */}
     </div>
   )
 }
