@@ -39,14 +39,14 @@ const Company = ({ company, nextCompany }) => {
   return (
     <AnimatePresence mode="wait">
       <div
-        className={`${company.backgroundClass} ${company.colorClass} relative flex h-screen w-screen flex-col`}
+        className={`${company.backgroundClass} ${company.colorClass} relative flex h-[100svh] flex-col`}
       >
         <NextSeo title={title} description={description} openGraph={{ title, description }} />
         <motion.div
           variants={pageVariants}
           initial="hidden"
           animate={control}
-          className="max-h-screen overflow-y-scroll"
+          className="max-h-[100svh] overflow-y-scroll"
           ref={containerRef}
         >
           <div className="flex min-h-[40vh] w-full flex-col items-center justify-center p-24 tablet:min-h-[75vh] tablet:p-48">
@@ -73,7 +73,7 @@ const Company = ({ company, nextCompany }) => {
               placeholder="blur"
             />
           </div>
-          <div className="flex w-screen flex-col tablet:px-48">
+          <div className="flex flex-col tablet:px-48">
             <Projects {...{ projects: company.projects }} />
           </div>
           <NextCompanyLink {...{ nextCompany }} />

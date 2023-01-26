@@ -178,7 +178,7 @@ export const PageTransition: FC<PropsWithChildren> = ({ children }) => {
         // onExited={() => window.scrollTo(0, 0)}
         mountOnEnter={true}
         unmountOnExit={true}
-        className="absolute w-screen"
+        className="absolute w-[100svw]"
       >
         {children}
       </Transition>

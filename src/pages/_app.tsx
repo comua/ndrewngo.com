@@ -25,7 +25,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
 
   return (
     <div
-      className={`relative flex min-h-screen overflow-hidden font-body ${inter.variable} ${dahlia.variable}`}
+      className={`relative flex h-[100svh] overflow-hidden font-body ${inter.variable} ${dahlia.variable}`}
     >
       <IsAppReadyProvider>
         <DefaultMeta canonical={url} />

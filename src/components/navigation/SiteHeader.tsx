@@ -23,7 +23,7 @@ export const SiteHeader: FC = () => {
 
   return (
     <header
-      className={`${textColor} fixed z-50 flex w-screen transition-colors duration-1000
+      className={`${textColor} fixed z-50 flex transition-colors duration-1000
     ease-in-out-expo`}
     >
       <div className="fixed top-24 left-24 text-14 tablet:top-48 tablet:left-48">

@@ -34,14 +34,14 @@ const AboutPage: FC = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="bg-gradient-about relative flex h-screen w-screen flex-col text-black ">
+      <div className="bg-gradient-about relative flex h-[100svh] flex-col text-black ">
         <NextSeo title={title} description={description} openGraph={{ title, description }} />
         <motion.div
           variants={pageVariants}
           initial="hidden"
           animate={control}
           ref={containerRef}
-          className="max-h-screen overflow-y-scroll px-24 tablet:px-48"
+          className="max-h-[100svh] overflow-y-scroll px-24 tablet:px-48"
         >
           <div className="pt-64 tablet:w-1/2 tablet:pt-96">
             <section>
@@ -83,7 +83,7 @@ const AboutPage: FC = () => {
                 <div className="pt-24 tablet:pt-48">
                   <h4 className={`mb-16 flex flex-col text-14`}>Technologies</h4>
                   <p className="text-16 tablet:text-24">
-                    React / Typescript / Next.js / GraphQL / Apollo / HTML / CSS / SQL / Ruby on
+                    React / TypeScript / Next.js / GraphQL / Apollo / HTML / CSS / SQL / Ruby on
                     Rails
                   </p>
                 </div>

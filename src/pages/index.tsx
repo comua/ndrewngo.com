@@ -16,13 +16,13 @@ const Home: FC = () => {
   return (
     <AnimatePresence>
       <div
-        className={`bg-gradient relative h-screen w-screen items-center justify-center bg-black text-white`}
+        className={`bg-gradient relative h-[100svh] items-center justify-center bg-black text-white`}
         ref={containerRef}
       >
         <NextSeo title={title} description={description} openGraph={{ title, description }} />
         {/* <div className="bg-gradient-mask-top fixed inset-x-0 top-0 z-10" />
         <div className="bg-gradient-mask-bottom fixed inset-x-0 top-[100vh] z-10 translate-y-[-100%]" /> */}
-        <section className="flex max-h-screen flex-col">
+        <section className="flex max-h-[100svh] flex-col">
           <CompanyCards {...{ pageControl: control, isPageInView: isInView }} />
         </section>
         <div className="fixed left-0 bottom-0 m-24 text-14 tablet:m-48">
