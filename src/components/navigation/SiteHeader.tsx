@@ -6,7 +6,7 @@ import useColorFromPath from '../../hooks/useColorFromPath'
 import { NoScrollLink } from './NoScrollLink'
 
 const NAV_MAP = [
-  { label: 'Experience', path: '/' },
+  { label: 'Portfolio', path: '/' },
   { label: 'About', path: '/about' },
 ]
 
@@ -27,10 +27,7 @@ export const SiteHeader: FC = () => {
     ease-in-out-expo`}
     >
       <div className="fixed top-24 left-24 text-14 tablet:top-48 tablet:left-48">
-        <NoScrollLink href="/">
-          <div>Andrew Ngo</div>
-          <div className="hidden tablet:block">Portfolio</div>
-        </NoScrollLink>
+        <NoScrollLink href="/">Andrew Ngo</NoScrollLink>
       </div>
       <div className="fixed top-24 right-24 text-14 tablet:top-48 tablet:right-48">
         <nav>
