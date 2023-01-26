@@ -17,7 +17,6 @@ import wocHeartRateZones from '../../public/images/future/woc-heart-rate-zones.p
 import futureHero from '../../public/images/future-hero.jpeg'
 import systemCampaigns from '../../public/images/google/system-campaigns.png'
 import googleHero from '../../public/images/google-hero.jpg'
-import dashboardClients from '../../public/images/meraki/dashboard-clients.png'
 import dashboardSearch from '../../public/images/meraki/dashboard-search.gif'
 import deviceLocation from '../../public/images/meraki/device-location.png'
 import deviceSummary from '../../public/images/meraki/device-summary.png'
@@ -67,8 +66,8 @@ export const COMPANY_MAP = {
       team: 'Product',
       url: 'https://www.future.co',
     },
-    colorClass: 'text-cyan-700',
-    backgroundClass: 'bg-cyan-100',
+    colorClass: 'text-teal-700',
+    backgroundClass: 'bg-teal-100',
     heroImage: futureHero,
     projects: [
       { name: 'Website', highlight: { images: [siteCoaches], description: '' } },
@@ -103,8 +102,8 @@ export const COMPANY_MAP = {
       team: 'Growth',
       url: 'https://www.everlane.com',
     },
-    colorClass: 'text-purple-700',
-    backgroundClass: 'bg-purple-100',
+    colorClass: 'text-gray-900',
+    backgroundClass: 'bg-gray-100',
     heroImage: everlaneHero,
     projects: [
       { name: 'Homepage', highlight: { images: [homeHero], description: '' } },
@@ -139,9 +138,13 @@ export const COMPANY_MAP = {
     projects: [
       {
         name: 'Dashboard',
-        highlight: { images: [dashboardClients, dashboardSearch], description: '' },
+        highlight: { images: [dashboardSearch], description: '' },
       },
-      { name: 'Device', highlight: { images: [deviceLocation, deviceSummary], description: '' } },
+      {
+        name: 'Location',
+        highlight: { images: [deviceLocation], description: '' },
+      },
+      { name: 'Device', highlight: { images: [deviceSummary], description: '' } },
     ],
   },
   [Company.Google]: {
@@ -157,8 +160,8 @@ export const COMPANY_MAP = {
       team: 'Ads',
       url: 'https://www.google.com',
     },
-    colorClass: 'text-red-700',
-    backgroundClass: 'bg-red-100',
+    colorClass: 'text-blue-700',
+    backgroundClass: 'bg-blue-100',
     heroImage: googleHero,
     projects: [{ name: 'Ads', highlight: { images: [systemCampaigns], description: '' } }],
   },
