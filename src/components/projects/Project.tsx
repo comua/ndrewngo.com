@@ -10,7 +10,7 @@ export const Project = ({ project, index = 0 }) => {
   const isDivisibleBy3 = placement % 3 === 0
 
   const containerClasses = twMerge(
-    'flex w-full tablet:mt-64 mt-24 tablet:px-0',
+    'flex w-full tablet:mt-64 mt-24 tablet:px-0 px-24',
     isDivisibleBy2 && 'justify-center',
     isDivisibleBy3 && 'justify-end'
   )
@@ -20,8 +20,11 @@ export const Project = ({ project, index = 0 }) => {
       <div className="flex w-full flex-col tablet:w-3/4 tablet:flex-row">
         {project.highlight.images?.map((image) => {
           return (
-            <div key={image} className="mt-24 flex w-full flex-col tablet:mt-0 tablet:ml-24">
-              <div className="relative w-full first:mt-0 first:ml-0" style={{ paddingTop }}>
+            <div
+              key={image}
+              className="mt-24 flex w-full flex-col first:ml-0 first:mt-0 tablet:mt-0 tablet:ml-24"
+            >
+              <div className="relative w-full" style={{ paddingTop }}>
                 <Image
                   src={image}
                   alt="project hero image"
