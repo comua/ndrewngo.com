@@ -102,7 +102,7 @@ export const COMPANY_MAP = {
       team: 'Growth',
       url: 'https://www.everlane.com',
     },
-    colorClass: 'text-gray-900',
+    colorClass: 'text-gray-700',
     backgroundClass: 'bg-gray-100',
     heroImage: everlaneHero,
     projects: [
