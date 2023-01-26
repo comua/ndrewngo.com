@@ -109,12 +109,12 @@
   }
 
   .link-list a {
-    border-bottom: 2px solid;
+    border-bottom: 2px solid theme(colors.black);
     transition: all 200ms;
     line-height: 1.25;
 
     &:hover {
-      border-bottom: none;
+      border-color: transparent;
     }
   }
 }
