@@ -25,7 +25,7 @@ const Home: FC = () => {
         <section className="flex max-h-screen flex-col">
           <CompanyCards {...{ pageControl: control, isPageInView: isInView }} />
         </section>
-        <div className="absolute left-0 bottom-0 m-24 text-14 tablet:m-48">
+        <div className="fixed left-0 bottom-0 m-24 text-14 tablet:m-48">
           <ClipboardCopy {...{ label: 'Frontend Engineer' }}>andrewngorain@gmail.com</ClipboardCopy>
         </div>
       </div>
