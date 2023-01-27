@@ -9,7 +9,7 @@ import everlaneHero from '../../public/images/everlane-hero.jpeg'
 import compassOnMount from '../../public/images/future/compass-on-mount.gif'
 import compassOverview from '../../public/images/future/compass-overview.png'
 import sidebarEquipment from '../../public/images/future/sidebar-equipment.png'
-import sidebarHome from '../../public/images/future/sidebar-home.png'
+import sidebarLikes from '../../public/images/future/sidebar-likes.png'
 import sidebarSchedule from '../../public/images/future/sidebar-schedule.png'
 import siteCoaches from '../../public/images/future/site-coaches.png'
 import wocHeartRateInteractive from '../../public/images/future/woc-heart-rate-interactive.gif'
@@ -83,7 +83,7 @@ export const COMPANY_MAP = {
       {
         name: 'Sidebar',
         highlight: {
-          images: [sidebarHome, sidebarSchedule, sidebarEquipment],
+          images: [sidebarSchedule, sidebarLikes, sidebarEquipment],
           description: '',
         },
       },
