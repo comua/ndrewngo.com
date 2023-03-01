@@ -76,15 +76,15 @@ const AboutPage: FC = () => {
                 <div>
                   <h4 className={`mb-16 flex flex-col text-14`}>What I do</h4>
                   <p className="text-16 tablet:text-24">
-                    Developing websites and applications with a focus on joyful experiences,
-                    impactful features, and pragmatic builds.
+                    Developing web applications with a focus on delightful user experiences,
+                    impactful features, and pragmatic solutions.
                   </p>
                 </div>
                 <div className="pt-24 tablet:pt-48">
                   <h4 className={`mb-16 flex flex-col text-14`}>Technologies</h4>
                   <p className="text-16 tablet:text-24">
                     React / TypeScript / Next.js / GraphQL / Apollo / HTML / CSS / SQL / Ruby on
-                    Rails
+                    Rails / Java
                   </p>
                 </div>
                 <div className="pt-24 tablet:pt-48">
@@ -93,6 +93,9 @@ const AboutPage: FC = () => {
                     <a href="mailto:andrewngorain@gmail.com?Subject=Hello">Email</a>
                     <a href="https://www.linkedin.com/in/andrewqngo/" className="ml-24">
                       LinkedIn
+                    </a>
+                    <a href="https://github.com/comua" className="ml-24">
+                      GitHub
                     </a>
                   </div>
                 </div>

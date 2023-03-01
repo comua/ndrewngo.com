@@ -20,8 +20,6 @@ const Home: FC = () => {
         ref={containerRef}
       >
         <NextSeo title={title} description={description} openGraph={{ title, description }} />
-        {/* <div className="bg-gradient-mask-top fixed inset-x-0 top-0 z-10" />
-        <div className="bg-gradient-mask-bottom fixed inset-x-0 top-[100vh] z-10 translate-y-[-100%]" /> */}
         <section className="flex max-h-[100svh] flex-col">
           <CompanyCards {...{ pageControl: control, isPageInView: isInView }} />
         </section>

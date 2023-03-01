@@ -137,12 +137,10 @@ export const PageTransition: FC<PropsWithChildren> = ({ children }) => {
   const router = useRouter()
   const prevPathRef = useRef<string>()
   const nextPathRef = useRef<string>()
-  const scrollYRef = useRef<number>()
 
   useEffect(() => {
     const handleRouteChange = (url) => {
       nextPathRef.current = url
-      scrollYRef.current = window.scrollY
     }
 
     router.events.on('routeChangeStart', handleRouteChange)
@@ -150,7 +148,6 @@ export const PageTransition: FC<PropsWithChildren> = ({ children }) => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
